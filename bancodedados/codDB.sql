@@ -1,0 +1,46 @@
+INSERT INTO multiplayer5.ACOES_LOG (`COD_ACOES_LOG`, `NOME_ACAO`) 
+	VALUES (1, 'efetuou Login');
+INSERT INTO multiplayer5.ACOES_LOG (`COD_ACOES_LOG`, `NOME_ACAO`) 
+	VALUES (2, 'Alterou Foto');
+INSERT INTO multiplayer5.ACOES_LOG (`COD_ACOES_LOG`, `NOME_ACAO`) 
+	VALUES (3, 'Desativado');
+INSERT INTO multiplayer5.ACOES_LOG (`COD_ACOES_LOG`, `NOME_ACAO`) 
+	VALUES (4, 'Deletado');
+INSERT INTO multiplayer5.ACOES_LOG (`COD_ACOES_LOG`, `NOME_ACAO`) 
+	VALUES (5, 'Reativado');
+INSERT INTO multiplayer5.ACOES_LOG (`COD_ACOES_LOG`, `NOME_ACAO`) 
+	VALUES (6, 'Alterou Senha');
+INSERT INTO multiplayer5.ACOES_LOG (`COD_ACOES_LOG`, `NOME_ACAO`) 
+	VALUES (7, 'Alterou Email');
+INSERT INTO multiplayer5.ACOES_LOG (`COD_ACOES_LOG`, `NOME_ACAO`) 
+	VALUES (8, 'Alterou Nome de Perfil');
+INSERT INTO multiplayer5.ACOES_LOG (`COD_ACOES_LOG`, `NOME_ACAO`) 
+	VALUES (9, 'Comentou');
+INSERT INTO multiplayer5.ACOES_LOG (`COD_ACOES_LOG`, `NOME_ACAO`) 
+	VALUES (10, 'Cadastro No Site');
+INSERT INTO multiplayer5.ACOES_LOG (`COD_ACOES_LOG`, `NOME_ACAO`) 
+	VALUES (11, 'efetuou Logout');
+	
+INSERT INTO multiplayer5.TIPO (`COD_TIPO`, `TIPO_USUARIO`) 
+	VALUES (1, 'ADM');
+INSERT INTO multiplayer5.TIPO (`COD_TIPO`, `TIPO_USUARIO`) 
+	VALUES (2, 'RES');
+INSERT INTO multiplayer5.TIPO (`COD_TIPO`, `TIPO_USUARIO`) 
+	VALUES (3, 'COL');
+INSERT INTO multiplayer5.TIPO (`COD_TIPO`, `TIPO_USUARIO`) 
+	VALUES (4, 'DES');
+
+INSERT INTO multiplayer5.USUARIO (`NOME_USUARIO`,`APELIDO_USUARIO`, `EMAIL_USUARIO`, `SENHA_USUARIO`, `TIPO_USUARIO`, `DATA_NASCIMENTO`, `USUARIO_DESATIVADO`) 
+	VALUES ('Administrador','Admin' ,'admin@admin.com', 'admin', 1, '2014-08-12', NULL);
+	
+INSERT INTO multiplayer5.CATEGORIA (`COD_CATEGORIA`, `NOME_CATEGORIA`) 
+	VALUES (1, 'PlayStation');
+INSERT INTO multiplayer5.CATEGORIA (`COD_CATEGORIA`, `NOME_CATEGORIA`) 
+	VALUES (2, 'Nintendo');
+INSERT INTO multiplayer5.CATEGORIA (`COD_CATEGORIA`, `NOME_CATEGORIA`) 
+	VALUES (3, 'XBOX');
+INSERT INTO multiplayer5.CATEGORIA (`COD_CATEGORIA`, `NOME_CATEGORIA`) 
+	VALUES (4, 'PC');
+
+
+	
