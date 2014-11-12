@@ -10,6 +10,18 @@
         <script type="text/javascript" src="../js/menu2.js"></script>
         <script type="text/javascript" src="../js/restrito.js"></script>
         <title></title>
+        <script type="text/javascript"> 
+            onload = function(){
+                var imgMiniLogo = document.getElementById("imgMiniLogo");
+                var imgLogo = document.getElementById("img-logo"); 
+                imgMiniLogo.innerHTML = "<img src='../imagens/logosReduzidos001.png' alt='' id='miniLogo'>";
+                imgLogo.innerHTML = "<img src='../imagens/logo001.png' alt='' id='logo'>";  
+                document.getElementById("nav").style.backgroundColor = "#00989E";
+                document.getElementById("navReduzido").style.backgroundColor = "#00989E";
+                document.getElementById("logar").style.borderBottom = "solid 5px #00989E"; 
+                document.getElementById("botaoLogin").style.backgroundColor = "#00989E";
+            };
+        </script>   
     </head>
     <body >
         <section id="container" >
@@ -69,41 +81,63 @@
                 </nav>
                 <article id="conteudo_infos">
                     <form action="inserirMateriaNova.php" method="post" enctype="multipart/form-data">
-                        <table id="tabelaPerfil" class="tableInserirMateria">
-                            <tr>
-                                <td class="icone"><img src="../imagens/picture.png" alt="imgCapa" > </td>
-                                <td class="texto"> Imagem Capa Matéria </td>
-                                <td class="campos"> <input type="file" name="imagemCapa"></td>
-                            </tr>
-                            <tr>
-                                <td class="icone"><img src="../imagens/pencil.png" alt="imgTitulo" class="editImgPencil"> </td>
-                                <td class="texto"> Título Matéria </td>
-                                <td class="campos"> <input type="text" name="titulo" class="textos_materia" id="titulo_materia"></td>
-                            </tr>  
-                            <tr>
-                                <td class="icone"><img src="../imagens/picture.png" alt="imgImagem" > </td>
-                                <td class="texto"> Imagem Principal </td>
-                                <td class="campos"> <input type="file" name="imagemPrincipal"></td>
-                            </tr>
-                            <tr>
-                                <td class="icone"><img src="../imagens/joystick.png" alt="imgJoystick" id="jostyck"> </td>
-                                <td class="texto"> Categoria </td>
-                                <td class="campos"> <input type="checkbox" name="categoria[]" class="categoria" value="1">  PlayStation
-                                     <input type="checkbox" name="categoria[]" class="categoria" value="2">  Nintendo
-                                     <input type="checkbox" name="categoria[]" class="categoria" value="3">  XBOX
-                                     <input type="checkbox" name="categoria[]" class="categoria" value="4">  PC
-                                </td>
-                            </tr>
+                        <figure id="imgCapaMateria">
+                            <p> Selecione uma imagem de capa com dimensões 400x250 para esta área.</p>
+                            <input type="file" name="imagemCapa" class="imgCapaMateria">
+                        </figure>
+                        <figure id="imgPrincipal">
+                            <p> Selecione uma imagem com dimensões 400x250 para esta área.</p>
+                            <input type="file" name="imagemCapa" class="imgPrincipal">
+                        </figure>
+                        <div id="tituloMateria">
+                            <input type="text" name="titulo" class="textos_materia" id="titulo_materia" placeholder="Digite aqui o título da Matéria">
+                        </div>                       
+                              
+                        <div id="conteudoMateria">
+                            
+                        </div>
+                        <div id="galeriaImagens">
+                            <figure class="imagensGaleria" >
+                               
+                            </figure>
+                            <figure class="imagensGaleria">
+                                
+                            </figure>
+                            <figure class="imagensGaleria" >
+                                
+                            </figure>
+                        </div>
+                        <div id="conteudoMateria2">                    
+                            
+                        </div>
+                        <div id="galeriaVideo">                    
+                            <p class="ediConteudoMateria">
+                            <?php
+                                infoArtigos('conteudoMateria','pc/thesims4.php');
+                            ?>
+                            </p>
+                        </div>
+                        <div id="colunista">     
+                            <figure id="autor_materia">
+                            <?php
+                                buscarImagemAutor('1');
+                            ?>
+                            </figure>
+                            <div id="descricaoColunista"> 
+                                <p>                     
+                                    <?php
+                                            buscarDescAutor('1');
+                                    ?> 
+                                </p>
+                            </div>                           
+                    </form> 
+                        <table id="tabelaPerfil" class="tableInserirMateria">  
                             <tr>
                                 <td class="icone"><img src="../imagens/genero.png" alt="imgSerie" > </td>
                                 <td class="texto"> Série </td>
                                 <td class="campos"> <input type="text" name="serie" class="textos_materia" id="serie_materia"></td>
                             </tr>
-                            <tr>
-                                <td class="icone"><img src="../imagens/picture.png" alt="imgImagem" > </td>
-                                <td class="texto"> Imagem Miniatura </td>
-                                <td class="campos"> <input type="file" name="imagemMiniatura"></td>
-                            </tr>
+                            
                             <tr>
                                 <td class="icone"><img src="../imagens/pencil.png" alt="imgDescrição" class="editImgPencil"> </td>
                                 <td class="texto"> Descrição </td>
@@ -153,8 +187,7 @@
                                 <td class="icone"colspan="2"><img src="../imagens/save.png" alt="imgImagem" > </td>
                                 <td class="texto" ><input type="submit" value="Postar Matéria" name="postarMateria" class="designButton"> </td>
                             </tr>
-                        </table>
-                    </form>    
+                        </table>   
                 </article>                
             </article>
             <footer id="footer">

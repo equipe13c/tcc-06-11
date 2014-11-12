@@ -552,7 +552,7 @@ color: white;
 }
 #conteudo{
     width: 80%;
-    height: auto;
+    height: auto;    
     float:left;
     margin-top:0px;
     margin-left: 160px;
@@ -629,12 +629,14 @@ color: white;
     font-family: century gothic;
     font-size: 12pt;
 }
+
 #conteudo_infos{
-    width: 100%;
+    width: 950px;
     height: auto;
-    float:left;
-    margin-top:-17px;
-    margin-left:0px;
+    float: left;
+    margin-left: 8.5%;
+    margin-top: 100px;
+    background-color: #E0E0F8;;
 }
 #mailImg{
     width:35px;
@@ -1021,7 +1023,7 @@ table.tablealterarCapa2 td.info{
     text-align: center;
 }
 table.tableInserirMateria{
-    margin-left:100px;
+    margin-left:25px;
     margin-top:50px;
     width:900px;
     border:1px solid black;
@@ -1040,16 +1042,26 @@ table.tableInserirMateria td.texto{
 }
 table.tableInserirMateria td.campos{
     text-align: center;
-    font-family:century gothic;
-    font-size:14pt;
+    font-family: century gothic;
+    font-size: 14pt;
 }
 #editImgCapa{
     width:30px;
     height:30px;
 }
 .textos_materia{
-    height:25px;
-    width:250px;
+    height: 25px;
+    width: 290px;
+    margin-top: 35px; 
+    margin-left: 50px;
+    float: left;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    font-size: 12pt;
+    border: none;
+    background-color: #00989E;
+    font-weight: bold;
 }
 #jostyck{
     width:50px;
@@ -1078,4 +1090,121 @@ table.tableInserirMateria td.campos{
     min-height: 150px;
     height:150px;
     max-height: 150px;
+}
+
+#imgPrincipal{
+    width:400px;
+    height:250px;
+    margin-top: 20px;
+    margin-left: 440px;
+    float: left;  
+    z-index: 1;
+    position: absolute;
+    background-color: #00989E;   
+}
+
+#imgPrincipal p{
+    margin-top: 90px;
+    text-align: center; 
+    font-family: century gothic;
+    color: white;
+    font-size: 14pt;
+}
+
+#imgPrincipal:hover{
+    color: white;
+    text-decoration: underline; 
+    box-shadow: 0 0 2px 2px #333;
+    cursor: pointer;
+}
+
+.imgPrincipal{
+    width: 100%;
+    height: 250px;    
+    margin-top: -40px;
+    border: none;
+    opacity: 0;    
+    cursor: pointer;
+}
+
+#imgCapaMateria{
+    width: 950px;
+    height: 300px;
+    float: left;
+    margin-left: 0px;
+    margin-top: 0px;
+    z-index: 0;
+    position: absolute;
+}
+
+.imgCapaMateria{
+    width: 950px;
+    height: 300px;
+    float: left;
+    margin-left: 0px;
+    margin-top: -70px;
+    z-index: 0;
+    position: absolute;
+    background-color: white;
+    border: none;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#imgCapaMateria p{
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 500px;
+    text-align: left; 
+    font-family: century gothic;
+    color: #00989E;
+    font-size: 14pt; 
+}
+
+#imgCapaMateria:hover{
+    color: #00989E;
+    text-decoration: underline; 
+    box-shadow: 0 0 2px 2px #333;
+}
+
+#imagemPrincipal{
+    width:390px;
+    height:240px;
+    margin-left:5px;
+    margin-top:5px
+}
+#tituloMateria{
+    width: 100%;
+    height: 100px;
+    margin-top: 130px;
+    margin-left: 0px;
+    float: left;
+    z-index: 0;
+    position: relative;    
+    background-color: #00989E;
+}
+
+#caixaTitulo{
+    width: 365px;
+    height: 90px;
+    margin-top: 5px;
+    margin-left: 10px;
+    float: left;
+}
+
+.editTitulo{
+    margin-top: 20px;  
+    font-family: century gothic;
+    font-size: 16pt;
+    color: #fff;    
+    text-align: center;
+}
+
+#descricaoMateria{
+    width: 400px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 20px;
+    float: left;
+    background-color: red;
 }

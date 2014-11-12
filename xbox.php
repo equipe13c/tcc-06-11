@@ -8,22 +8,15 @@
         <script type="text/javascript" src="js/cycle.js"></script>
         <script type="text/javascript" src="js/javascript.js"></script>
         <script type="text/javascript">
-            $(document).ready(function(){
-               $('#slide').before('<img id="controleGaleria">').cycle({
-                   fx: 'scrollHorz',
-                   pause: true,
-                   timeout: 6000,
-                   next: '#next',
-                   prev: '#prev'
-               }); 
-            });           
-            
             onload = function(){
+                var imgMiniLogo = document.getElementById("imgMiniLogo");
+                var imgLogo = document.getElementById("img-logo");                
+                imgMiniLogo.innerHTML = '<img src="imagens/logosReduzidos003.png" alt="" id="miniLogo">';
+                imgLogo.innerHTML = '<img src="imagens/logo003.png" alt="" id="logo">';
                 document.getElementById("nav").style.backgroundColor = "#8EA50D";
-                document.getElementById("search").style.backgroundColor = "#8EA50D";
-                document.getElementById("logar").style.borderBottom = "solid 5px #8EA50D";
-                var imgLogo = document.getElementById("img-logo");
-                imgLogo.innerHTML = '<img src="imagens/logo003.png" alt="LogoImagem" id="logo">';
+                document.getElementById("navReduzido").style.backgroundColor = "#8EA50D";                
+                document.getElementById("botaoLogin").style.backgroundColor = "#8EA50D";
+                document.getElementById("logar").style.borderBottom = "solid 5px #8EA50D";                 
             };
         </script>       
         <title></title>

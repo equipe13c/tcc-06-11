@@ -44,7 +44,7 @@
             </header>
             <article id="article"> 
                 <div id="msgCadastro">
-
+                    
                 </div>
                 <div id="area1">
                     <div id="entrar">

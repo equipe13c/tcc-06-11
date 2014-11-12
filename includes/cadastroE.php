@@ -44,7 +44,9 @@
             </header>
             <article id="article"> 
                 <div id="msgCadastro">
-
+                        <?php
+                            include_once 'includes/cadastroF4.php';
+                        ?>  
                 </div>
                 <div id="area1">
                     <div id="entrar">

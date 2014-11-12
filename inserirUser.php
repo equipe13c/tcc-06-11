@@ -1,5 +1,6 @@
 <?php
 include "conexao/conecta.inc";
+include "cadastro.php";
 include_once 'classes/Bcrypt.class.php';
 session_start();
 echo "<meta charset=UTF-8>";
@@ -32,7 +33,7 @@ if(!($senha !== $confirmsenha)&& !($email !== $confirmemail))
 {
 
 if($email === ""){
-    echo "Desculpe, Campo de E-mail não Definidos";
+    echo "<script>cadastroF2();</script>";
 }
 else{
 if (isMail($email)){
@@ -40,7 +41,7 @@ if (isMail($email)){
     $query = "INSERT INTO USUARIO (NOME_USUARIO,APELIDO_USUARIO, SENHA_USUARIO, EMAIL_USUARIO, DATA_NASCIMENTO, TIPO_USUARIO)
         VALUES('$nome','$apelido', '$senha', '$email', '$data', $tipo)";
         if(mysql_query($query)){
-                include_once 'includes/cadastroE.php';
+               echo "<script>cadastroE();</script>";
                 $busca = "SELECT * FROM USUARIO WHERE EMAIL_USUARIO='$email'";
                 $resultado = mysql_query($busca);
                 $users = mysql_fetch_assoc($resultado);
@@ -65,21 +66,21 @@ if (isMail($email)){
                 }
         }
         else{
-        include_once 'includes/cadastroF4.php';
+echo "<script>cadastroF5();</script>";
         }  
     
 } 
         else{
-        include_once 'includes/cadastroF3.php';
+echo "<script>cadastroF4();</script>";
         } 
 }
     }
     else{
-    include_once 'includes/cadastroF1.php';  
+echo "<script>cadastroF3();</script>";
     }
 }
 else{
-include_once 'includes/cadastroF2.php';
+echo "<script>cadastroF();</script>";
 }
 ?>  
 
