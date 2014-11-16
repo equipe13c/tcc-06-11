@@ -19,8 +19,59 @@
                 document.getElementById("nav").style.backgroundColor = "#00989E";
                 document.getElementById("navReduzido").style.backgroundColor = "#00989E";
                 document.getElementById("logar").style.borderBottom = "solid 5px #00989E"; 
-                document.getElementById("botaoLogin").style.backgroundColor = "#00989E";
-            };
+                document.getElementById("botaoLogin").style.backgroundColor = "#00989E";                
+                document.getElementById("fundoDescricaoMateria").style.backgroundColor = "#26C8D1";
+            };            
+            function teste(form) {
+                document.getElementById("imagemCapa").src = form;
+            }
+ function mostraOculta(opc, id, id2){  
+     var textbox = document.getElementById(id);
+     var textbox2 = document.getElementById(id2);  
+                if(document.getElementById(opc).value == 'Multiplataforma'){  
+                        if(textbox.style.display == 'none'){  
+                            textbox.style.display = 'inline';  
+                        }  
+                    }else {  
+                        textbox.style.display = 'none';  
+                    }  
+                    if(document.getElementById(opc).value == 'Outro'){  
+                        if(textbox2.style.display == 'none'){  
+                            textbox2.style.display = 'inline';  
+                        }  
+                    }else {  
+                        textbox2.style.display = 'none';  
+                    }  
+                } 
+                
+
+                !window.jQuery && document.write('<script src="http://tecnowarez.com/site/scripts/js/jquery-1.4.3.min.js"><\/script>');
+                function preview(input, tipo) {
+                    if(tipo == 'capa'){
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+ 
+                    reader.onload = function (e) {
+                            $('#preview_imageCapa')
+                .attr('src', e.target.result)
+                                    .width(950)
+                    };
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+                    if(tipo == 'principal'){
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+ 
+                    reader.onload = function (e) {
+                            $('#preview_image')
+                .attr('src', e.target.result)
+                                    .width(400)
+                    };
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+            }
         </script>   
     </head>
     <body >
@@ -31,8 +82,9 @@
             ?>
             <header id="cabecalho">
                 <?php
-                include_once '../includes/menuR.php';
                 validaAutenticacao('../index.php','3');
+                include_once '../includes/menuR.php';
+                
                 ?>
             </header>
             <figure id="imgCapa">
@@ -80,21 +132,146 @@
                     ?>
                 </nav>
                 <article id="conteudo_infos">
-                    <form action="inserirMateriaNova.php" method="post" enctype="multipart/form-data">
+                    <form action="inserirMateriaNova.php" method="post" enctype="multipart/form-data" class="novaMateria">
+                        <div id="categoria">
+                            <h1> Selecione Uma Categoria Abaixo: </h1> <br/>
+                            <ul class="inputRadios">
+                            <li class="inputRadio radioNintendo">
+                              <input name="payment_methods" type="radio" id="radioNintendo" onclick="ocultar('categorias','nintendo');">
+                              <label for="radioNintendo">Nintendo</label><br/><br/><br/>
+                              <p> Nintendo </p>
+                            </li>
+
+                            <li class="inputRadio radioPc">
+                              <input name="payment_methods" type="radio" id="radioPc" onclick="ocultar('categorias','pc');">
+                              <label for="radioPc">PC</label><br/><br/><br/>
+                              <p> PC </p>
+                            </li>
+
+                            <li class="inputRadio radioPlaystation">
+                              <input name="payment_methods" type="radio" id="radioPlaystation" onclick="ocultar('categorias','ps');">
+                              <label for="radioPlaystation">Playstation</label><br/><br/><br/>
+                              <p> Playstation </p>
+                            </li>
+
+                            <li class="inputRadio radioXbox">
+                              <input name="payment_methods" type="radio" id="radioXbox" onclick="ocultar('categorias','xbox');">    
+                              <label for="radioXbox">Xbox</label><br/><br/><br/>
+                              <p> Xbox </p>
+                            </li>
+                            <li class="inputRadio radioMulti">
+                              <input name="payment_methods" type="radio" id="radioMulti" onclick="mostraOculta2('radioMulti','categorias','imgPrincipal');">    
+                              <label for="radioMulti">Xbox</label><br/><br/><br/>
+                              <p> Multiplataforma </p>
+                            </li>
+                          </ul>
+                            
+                            
+                            <div id="categorias" style="display:none;">
+
+                                <ul class="inputCheckboxs">
+                                  <li class="inputCheckbox checkboxNintendo">
+                                    <input name="payment_methods" type="checkbox" id="checkboxNintendo">
+                                    <label for="checkboxNintendo">Nintendo</label><br/><br/><br/>
+                                    <p> Nintendo </p>
+                                  </li>
+
+                                  <li class="inputCheckbox checkboxPc">
+                                    <input name="payment_methods" type="checkbox" id="checkboxPc">
+                                    <label for="checkboxPc">PC</label><br/><br/><br/>
+                                    <p> PC </p>
+                                  </li>
+
+                                  <li class="inputCheckbox checkboxPlaystation">
+                                    <input name="payment_methods" type="checkbox" id="checkboxPlaystation">
+                                    <label for="checkboxPlaystation">Playstation</label><br/><br/><br/>
+                                    <p> Playstation </p>
+                                  </li>
+
+                                  <li class="inputCheckbox checkboxXbox">
+                                    <input name="payment_methods" type="checkbox" id="checkboxXbox">    
+                                    <label for="checkboxXbox">Xbox</label><br/><br/><br/>
+                                    <p> Xbox </p>
+                                  </li>
+                                </ul>
+
+                            </div>
+                            
+                            
+                            
+                        </div>
                         <figure id="imgCapaMateria">
                             <p> Selecione uma imagem de capa com dimensões 400x250 para esta área.</p>
-                            <input type="file" name="imagemCapa" class="imgCapaMateria">
+                            <img id="preview_imageCapa" alt="" src="">
+                            <input type="file" name="imagemCapa" class="imgCapaMateria" onchange="preview(this,'capa');" multiple>
                         </figure>
-                        <figure id="imgPrincipal">
+                        <figure id="imgPrincipal">                            
                             <p> Selecione uma imagem com dimensões 400x250 para esta área.</p>
-                            <input type="file" name="imagemCapa" class="imgPrincipal">
+                            <img id="preview_image" alt="" src="">
+                            <input type="file" name="imagemPrincipal" class="imgPrincipal" id="files" onchange="preview(this,'principal');" multiple>
                         </figure>
                         <div id="tituloMateria">
                             <input type="text" name="titulo" class="textos_materia" id="titulo_materia" placeholder="Digite aqui o título da Matéria">
                         </div>                       
-                              
+                        <div id="fundoDescricaoMateria">
+                            <div id="descricaoMateria">
+                                <p class="editDescricao">
+                                    <textarea name="descricao" class="descricao_materia" placeholder="Descrição do Jogo"></textarea>
+                                </p>
+                                <p class="editPlataforma">
+                                    Plataforma
+                                    <div id="plataforma">  
+                                            <select name="plataforma" class="plataforma" id="ids" onchange="mostraOculta('ids', 'multiPlataforma', 'outraPlataforma' );">  
+                                                <optgroup label="Nintendo">
+                                                    <option> NES - Nintendinho </option>
+                                                    <option> Nintendo 64 </option>
+                                                    <option> Nintendo 3DS </option>  
+                                                    <option> Nintendo DS </option>  
+                                                    <option> Nintendo GameCube </option>
+                                                    <option> Nintendo Wii </option>
+                                                    <option> Nintendo Wii U </option>                               
+                                                    <option> SNES - Super Nintendo </option>                                                     
+                                                </optgroup>
+                                                <optgroup label="PC">
+                                                    <option> PC </option>
+                                                </optgroup>
+                                                <optgroup label="PlayStation">
+                                                    <option> PlayStation One </option>
+                                                    <option> PlayStation 2 </option>
+                                                    <option> PlayStation 3 </option>
+                                                    <option> PlayStation 4 </option>
+                                                    <option> PSP </option>
+                                                    <option> PS Vita </option> 
+                                                </optgroup>
+                                                <optgroup label="Xbox">
+                                                    <option> Xbox </option>
+                                                    <option> Xbox 360 </option>
+                                                    <option> Xbox One </option>  
+                                                </optgroup>   
+                                                <optgroup label="Outras Opções">
+                                                    <option value="Multiplataforma"> Multiplataforma </option>  
+                                                    <option value="Outro"> Outra </option>
+                                                </optgroup> 
+                                            </select>
+                                    </div>
+                                <div id="multiPlataforma" style="display: none;">  
+                                    <input type="text" name="multiPlataforma" id="multiPlataformas" maxlength="100" placeholder="Digite mais de uma plataforma"/>  
+                                </div>
+                                <div id="outraPlataforma" style="display: none;">  
+                                    <input type="text" name="outraPlataforma" id="outrasPlataformas" maxlength="20" placeholder="Digite outra plataforma"/>  
+                                </div>                                                                
+                                <div class="editDatalancamento">
+                                 <p id="textData"> Data de Lançamento </p>
+                                    <input type="date" name="data_lancamento" class="dataLancamento" >
+                                </div>
+                            </div>
+                        </div>      
                         <div id="conteudoMateria">
-                            
+                            Limite de Caracteres: 1500.
+                            <div id="subtituloMateria">
+                                <input type="text" class="subtituloMateria" placeholder="Subtítulo da Matéria">
+                            </div>
+                            <textarea id="campoConteudo1" placeholder="Digite o texto da matéria aqui" maxlength="1500"></textarea>
                         </div>
                         <div id="galeriaImagens">
                             <figure class="imagensGaleria" >
@@ -129,24 +306,14 @@
                                             buscarDescAutor('1');
                                     ?> 
                                 </p>
-                            </div>                           
+                            </div> 
+                        </div>
                     </form> 
-                        <table id="tabelaPerfil" class="tableInserirMateria">  
-                            <tr>
-                                <td class="icone"><img src="../imagens/genero.png" alt="imgSerie" > </td>
-                                <td class="texto"> Série </td>
-                                <td class="campos"> <input type="text" name="serie" class="textos_materia" id="serie_materia"></td>
-                            </tr>
-                            
-                            <tr>
-                                <td class="icone"><img src="../imagens/pencil.png" alt="imgDescrição" class="editImgPencil"> </td>
-                                <td class="texto"> Descrição </td>
-                                <td class="campos"> <textarea name="descricao" class="descricao_materia"></textarea></td>
-                            </tr> 
+                        <!-- <table id="tabelaPerfil" class="tableInserirMateria">
                             <tr>
                                 <td class="icone"><img src="../imagens/data.png" alt="imgDescrição" class="editImgPencil"> </td>
                                 <td class="texto"> Data de Lançamento </td>
-                                <td class="campos"> <input type="text" name="data_lancamento" class="textos_materia" ></td>
+                                <td class="campos"> </td>
                             </tr>
                             <tr>
                                 <td class="icone"><img src="../imagens/pencil.png" alt="imgSerie" class="editImgPencil"> </td>
@@ -187,7 +354,7 @@
                                 <td class="icone"colspan="2"><img src="../imagens/save.png" alt="imgImagem" > </td>
                                 <td class="texto" ><input type="submit" value="Postar Matéria" name="postarMateria" class="designButton"> </td>
                             </tr>
-                        </table>   
+                        </table>  -->
                 </article>                
             </article>
             <footer id="footer">

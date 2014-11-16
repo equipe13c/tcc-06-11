@@ -42,7 +42,7 @@
                 </div>
             </header>
             <article id="article"> 
-               <div id="msgCadastro2">
+                <div id="msgCadastro2">
 
                 </div>
                 <div id="area1">

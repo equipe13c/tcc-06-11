@@ -77,6 +77,7 @@ function VerificaSessao(){
                 echo '<div class="links_usuario">';
                     echo "<a href='colunista/painel.php'>Perfil </a><br/>";
                     echo "<a href='colunista/index.php'>Nova Matéria </a><br/>";
+                    echo "<a href='colunista/inserirPersonagem.php'>Novo Personagem </a><br/>";
                     echo "<a href='colunista/sair.php'>Logout </a><br/>";
                 echo '</div>';
                 }

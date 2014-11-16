@@ -233,6 +233,33 @@ CREATE TABLE `desativados` (
 
 
 --
+-- Definition of table `imagem_materia_personagem`
+--
+
+DROP TABLE IF EXISTS `imagem_materia_personagem`;
+CREATE TABLE `imagem_materia_personagem` (
+  `COD_IMAGEM_PERSONAGEM` int(11) NOT NULL AUTO_INCREMENT,
+  `COD_PERSONAGEM_IMAGEM` int(11) NOT NULL,
+  `IMAGEM_CAPA` varchar(20) NOT NULL,
+  `IMAGEM_PRINCIPAL` varchar(20) NOT NULL,
+  `IMAGEM_GALERIA` varchar(20) NOT NULL,
+  `IMAGEM_GALERIA2` varchar(20) NOT NULL,
+  `IMAGEM_GALERIA3` varchar(20) NOT NULL,
+  `IMAGEM_MINIATURA_HOVER` varchar(20) NOT NULL,
+  `IMAGEM_MINIATURA_ALT` varchar(20) NOT NULL,
+  PRIMARY KEY (`COD_IMAGEM_PERSONAGEM`,`COD_PERSONAGEM_IMAGEM`),
+  CONSTRAINT `IMAGEM_PERSONAGEM` FOREIGN KEY (`COD_IMAGEM_PERSONAGEM`) REFERENCES `personagem` (`COD_PERSONAGEM`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `imagem_materia_personagem`
+--
+
+/*!40000 ALTER TABLE `imagem_materia_personagem` DISABLE KEYS */;
+/*!40000 ALTER TABLE `imagem_materia_personagem` ENABLE KEYS */;
+
+
+--
 -- Definition of table `imagem_usuario`
 --
 
@@ -353,6 +380,30 @@ INSERT INTO `log` (`COD_LOG`,`IP_LOG`,`DATA_LOG`,`HORA_LOG`,`MENSAGEM_LOG`,`ACAO
  (17,'::1','2014-11-05','21:25:31','josi: Realizou Cadastro',10,'josimar3@gmail.com',34),
  (18,'::1','2014-11-05','21:26:27','josi: Realizou Cadastro',10,'josimar4@gmail.com',35);
 /*!40000 ALTER TABLE `log` ENABLE KEYS */;
+
+
+--
+-- Definition of table `personagem`
+--
+
+DROP TABLE IF EXISTS `personagem`;
+CREATE TABLE `personagem` (
+  `COD_PERSONAGEM` int(11) NOT NULL AUTO_INCREMENT,
+  `NOME_PERSONAGEM` varchar(45) NOT NULL,
+  `SERIE_PERSONAGEM` varchar(45) NOT NULL,
+  `DATA_PERSONAGEM` date NOT NULL,
+  `CONTEUDO_PERSONAGEM` text NOT NULL,
+  `TITULO_PERSONAGEM` varchar(45) NOT NULL,
+  `SUBTITULO_PERSONAGEM` varchar(45) NOT NULL,
+  PRIMARY KEY (`COD_PERSONAGEM`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `personagem`
+--
+
+/*!40000 ALTER TABLE `personagem` DISABLE KEYS */;
+/*!40000 ALTER TABLE `personagem` ENABLE KEYS */;
 
 
 --

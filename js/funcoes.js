@@ -1,4 +1,4 @@
-function loginE(){
+﻿function loginE(){
     document.getElementById('msglogin').innerHTML = "<h3 class='msgloginE'>Login Efetuado</h3>";
     setTimeout("window.location.href ='index.php'",3000);
 }
@@ -34,3 +34,48 @@ function cadastroE(){
                     '<p> Cadastro realizado com sucesso. </p>'+
                 '</div>';
 }
+
+ function mostraOculta2(opc, id){  
+     var textbox = document.getElementById(id); 
+     if(id=='categorias'){
+                        document.getElementById("imgPrincipal").style.backgroundColor = "#00989E";
+                        document.getElementById("tituloMateria").style.backgroundColor = "#00989E";               
+                        document.getElementById("fundoDescricaoMateria").style.backgroundColor = "#26C8D1";
+     }
+
+                if(document.getElementById(opc).checked){
+
+                        if(textbox.style.display == 'none'){  
+                           textbox.style.display = 'inline';  
+                           document.getElementById("imgPrincipal").style.marginTop = "460px";
+                                            }  
+                    }else {  
+                        textbox.style.display = 'none'; 
+
+                    }                  
+                }                 
+                function ocultar(id,tipo){
+                    document.getElementById(id).style.display = 'none';
+                    document.getElementById("imgPrincipal").style.marginTop = "390px";
+                    if(tipo=='nintendo'){
+                        document.getElementById("imgPrincipal").style.backgroundColor = "#009FE3";
+                        document.getElementById("tituloMateria").style.backgroundColor = "#009FE3";               
+                        document.getElementById("fundoDescricaoMateria").style.backgroundColor = "#CEECF5";
+                    }
+                    if(tipo=='ps'){
+                        document.getElementById("imgPrincipal").style.backgroundColor = "#9C1006";
+                        document.getElementById("tituloMateria").style.backgroundColor = "#9C1006";               
+                        document.getElementById("fundoDescricaoMateria").style.backgroundColor = "#FCC6C0";
+                    }
+                    if(tipo=='pc'){
+                        document.getElementById("imgPrincipal").style.backgroundColor = "#F39200";
+                        document.getElementById("tituloMateria").style.backgroundColor = "#F39200";               
+                        document.getElementById("fundoDescricaoMateria").style.backgroundColor = "#F7D47F";
+                    }
+                    if(tipo=='xbox'){
+                        document.getElementById("imgPrincipal").style.backgroundColor = "#8EA50D";
+                        document.getElementById("tituloMateria").style.backgroundColor = "#8EA50D";               
+                        document.getElementById("fundoDescricaoMateria").style.backgroundColor = "#A9F5D0";
+                    }
+
+                }
