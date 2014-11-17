@@ -93,11 +93,14 @@
                     </div>
                 </div>    
                 <div id="conteudoMateria">
-                    <p class="editTituloconteudo">
+                    <div class="editTituloconteudo">
+                        <p>
                     <?php
                         infoArtigos('tituloConteudo','pc/thesims4.php');
                     ?>
-                    </p>
+                        </p>
+
+                    </div>
                     <p class="ediConteudoMateria">
                     <?php
                         infoArtigos('conteudoMateria','pc/thesims4.php');
@@ -120,13 +123,6 @@
                             infosImagensMateria('imagemgaleria3','1');
                         ?>
                     </figure>
-                </div>
-                <div id="conteudoMateria2">                    
-                    <p class="ediConteudoMateria">
-                    <?php
-                        infoArtigos('conteudoMateria2','pc/thesims4.php');
-                    ?>
-                    </p>
                 </div>
                 <div id="galeriaVideo">                    
                     <p class="ediConteudoMateria">

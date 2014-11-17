@@ -952,7 +952,7 @@ color:#00989E;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-#conteudoMateria, #conteudoMateria2{
+#conteudoMateria{
     width: 100%;
     height: auto;
     margin-top: 0px;
@@ -975,12 +975,13 @@ color:#00989E;
 .ediConteudoMateria{
     font-size: 14pt;
     font-family: century gothic;
-    margin-left:50px;
-    margin-top:100px;
-    width: 700px;
+    padding-left:70px;
+    margin-top:0px;
+    width: 500px;
     float:left;
-    height:100px;
+    height:400px;
     text-align: left;
+    background-color:blue;
 }
 
 #galeriaImagens{
