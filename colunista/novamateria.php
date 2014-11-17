@@ -266,52 +266,6 @@
                             <input type="submit" value="Postar Matéria" name="postarMateria" class="inserirMateria">
                         </div>
                     </form> 
-                        <!-- <table id="tabelaPerfil" class="tableInserirMateria">
-                            <tr>
-                                <td class="icone"><img src="../imagens/data.png" alt="imgDescrição" class="editImgPencil"> </td>
-                                <td class="texto"> Data de Lançamento </td>
-                                <td class="campos"> </td>
-                            </tr>
-                            <tr>
-                                <td class="icone"><img src="../imagens/pencil.png" alt="imgSerie" class="editImgPencil"> </td>
-                                <td class="texto"> Título Conteúdo </td>
-                                <td class="campos"> <input type="text" name="titulo_conteudo" class="textos_materia" id="titulo_conteudo_materia" maxlength="100"></td>
-                            </tr>
-                            <tr>
-                                <td class="icone"><img src="../imagens/pencil.png" alt="imgDescrição" class="editImgPencil"> </td>
-                                <td class="texto"> Conteúdo </td>
-                                <td class="campos"> <textarea name="conteudo" class="conteudo_materia" maxlength="150"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td class="icone"><img src="../imagens/pencil.png" alt="imgDescrição" class="editImgPencil"> </td>
-                                <td class="texto"> Conteúdo 2 </td>
-                                <td class="campos"> <textarea name="conteudo2" class="conteudo_materia" maxlength="150"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td class="icone"><img src="../imagens/pencil.png" alt="imgDescrição" class="editImgPencil"> </td>
-                                <td class="texto"> URL Matéria </td>
-                                <td class="campos"> <input type="text" name="url_materia" class="textos_materia" ></td>
-                            </tr>
-                            <tr>
-                                <td class="icone"><img src="../imagens/picture.png" alt="imgImagem" > </td>
-                                <td class="texto"> Imagem Galeria </td>
-                                <td class="campos"> <input type="file" name="imagemGaleria"></td>
-                            </tr>
-                            <tr>
-                                <td class="icone"><img src="../imagens/picture.png" alt="imgImagem" > </td>
-                                <td class="texto"> Imagem2 Galeria </td>
-                                <td class="campos"> <input type="file" name="imagemGaleria2"></td>
-                            </tr>
-                            <tr>
-                                <td class="icone"><img src="../imagens/picture.png" alt="imgImagem" > </td>
-                                <td class="texto"> Imagem3 Galeria </td>
-                                <td class="campos"> <input type="file" name="imagemGaleria3"></td>
-                            </tr>
-                            <tr>
-                                <td class="icone"colspan="2"><img src="../imagens/save.png" alt="imgImagem" > </td>
-                                <td class="texto" ><input type="submit" value="Postar Matéria" name="postarMateria" class="designButton"> </td>
-                            </tr>
-                        </table>  -->
                 </article>                
             </article>
             <footer id="footer">
