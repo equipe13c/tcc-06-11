@@ -167,3 +167,27 @@ function mostraOculta(opc, id, id2){
                     }
 
                 }
+                
+                function previewVideo(info,id, id2){
+                    if(document.getElementById(info).value == ""){
+                        var urlVideo = document.getElementById(info);
+                        urlVideo.style.border = "1px solid red";
+                        urlVideo.focus();
+                        
+                    }
+                    else{
+                    if(id2 == 'galeriaVideo1'){
+                    var urlVideo = document.getElementById("urlVideo1").value;  
+                    var res = urlVideo.replace("watch?v=", "embed/");                   
+                    document.getElementById(id).src = res;
+                    document.getElementById("video1").style.display = 'inline'; 
+                    }
+                    if(id2 == 'galeriaVideo2'){
+                    var urlVideo = document.getElementById("urlVideo2").value;                   
+                    var res = urlVideo.replace("watch?v=", "embed/");                   
+                    document.getElementById(id).src = res;
+                    document.getElementById("video2").style.display = 'inline';
+                    }
+                }
+                }
+                

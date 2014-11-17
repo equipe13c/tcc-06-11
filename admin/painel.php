@@ -34,8 +34,8 @@
             ?>
             <header id="cabecalho">
                 <?php
-                include_once '../includes/menuR.php';
                 validaAutenticacao('../index.php','1');
+                include_once '../includes/menuR.php';                
                 ?>
             </header>
             <figure id="imgCapa">

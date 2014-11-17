@@ -242,7 +242,25 @@
                                 <p> imagem 255x150</p>
                                 <img id="preview_imageGaleria3" alt="" src="">
                                 <input type="file" name="imagemCapa" class="imgGaleria1" onchange="preview(this,'galeria3');" multiple>
-                            </figure>
+                            </figure>                                
+                        </div>
+                        <div id="galeriaVideo">
+                            <div id="opcoesVideo2">
+                            <input type="text" name="urlVideo1" class='txtUrlVideos' id="urlVideo1" placeholder="DIGITE A URL DO VIDEO">
+                            <input type='button' class='previewVideos' id="preverVideo1" onclick="previewVideo('urlVideo1','iframeVideo1','galeriaVideo1');" value="Prever Vídeo"> </button>
+                            <input type='button' class='retirarVideos' id="retirarVideo1" onclick="retirarVideo('video1','galeriaVideo1');" value="Retirar Vídeo"> </button>
+                            </div>
+                            <div id="opcoesVideo2">
+                            <input type="text" name="urlVideo2" id="urlVideo2" class='txtUrlVideos' placeholder="DIGITE A URL DO VIDEO">
+                            <input type='button' class='previewVideos' id="preverVideo2" onclick="previewVideo('urlVideo2','iframeVideo2','galeriaVideo2');" value="Prever Video"> </button>
+                            <input type='button' class='retirarVideos' id="retirarVideo2" onclick="retirarVideo('video2','galeriaVideo2');" value="Retirar Vídeo"> </button>
+                            </div>
+                            <div id="video1" style="display:none">
+                                <iframe width="425" id="iframeVideo1" height="300" src="" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div id="video2" style="display:none">
+                                <iframe width="425" id="iframeVideo2" height="300" src="" frameborder="0" allowfullscreen></iframe>     
+                            </div>
                         </div>
                     </form> 
                         <!-- <table id="tabelaPerfil" class="tableInserirMateria">

@@ -1798,3 +1798,111 @@ ul li p{
     text-decoration: underline; 
     box-shadow: 0 0 2px 2px #333;
 }
+
+#galeriaVideo{
+    width: 100%;
+    min-height: 130px;
+    height: auto;
+    float: left;
+    margin-left: 0;
+    margin-top: 0;      
+    margin-bottom: 10px;
+    border: none;
+    font-family: arial;
+    font-size: 12pt;
+    color: #000;
+    background-color: lightgrey;
+}
+#video1{
+   width: 425px;
+    height: 300px;
+    float: left;    
+    margin-top: 25px;  
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border: none;
+    font-family: arial;
+    font-size: 12pt;
+    color: #000;
+    background-color: #fff;
+}
+#video2{
+    width: 425px;
+    height: 300px;
+    float: right;    
+    margin-top: 25px;  
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border: none;
+    font-family: arial;
+    font-size: 12pt;
+    color: #000;
+    background-color: #fff;
+}
+
+#video1 + #video2{
+    margin-left: 52.5px;
+}
+.txtUrlVideos{
+    height:30px;
+    width:300px;
+    float: left;
+    margin-left: 90px;
+    margin-top: 30px;   
+    border: none;
+    color: #000;
+    text-align: center;
+    font-family: century gothic;
+    font-size: 10pt;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#urlVideo2{
+margin-left: 170px;
+}
+.previewVideos{
+    height:30px;
+    width:120px;
+    border-radius:0;
+    background-color:#00989E;
+    float:left;
+    margin-top: 10px;
+    margin-left:100px;
+    color: #fff;
+    text-align: center;
+    font-family: century gothic;
+    font-size: 10pt;
+    text-transform: uppercase;
+    font-weight: bold;
+    border:0px;
+}
+.retirarVideos + .previewVideos{
+margin-left: 220px; 
+}
+.previewVideos:hover{
+       cursor: pointer;
+       opacity:0.7;
+}
+.retirarVideos{
+    height:30px;
+    width:120px;
+    border-radius:0;
+    background-color:#00989E;
+    float:left;
+    margin-top: 10px;
+    margin-left:10px;
+    color: #fff;
+    text-align: center;
+    font-family: century gothic;
+    font-size: 10pt;
+    text-transform: uppercase;
+    font-weight: bold;
+    border:0px;
+}
+.retirarVideos + .retirarVideos{
+margin-left: 350px; 
+}
+.retirarVideos:hover{
+       cursor: pointer;
+       opacity:0.7;
+}
