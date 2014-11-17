@@ -25,53 +25,7 @@
             function teste(form) {
                 document.getElementById("imagemCapa").src = form;
             }
- function mostraOculta(opc, id, id2){  
-     var textbox = document.getElementById(id);
-     var textbox2 = document.getElementById(id2);  
-                if(document.getElementById(opc).value == 'Multiplataforma'){  
-                        if(textbox.style.display == 'none'){  
-                            textbox.style.display = 'inline';  
-                        }  
-                    }else {  
-                        textbox.style.display = 'none';  
-                    }  
-                    if(document.getElementById(opc).value == 'Outro'){  
-                        if(textbox2.style.display == 'none'){  
-                            textbox2.style.display = 'inline';  
-                        }  
-                    }else {  
-                        textbox2.style.display = 'none';  
-                    }  
-                } 
-                
-
-                !window.jQuery && document.write('<script src="http://tecnowarez.com/site/scripts/js/jquery-1.4.3.min.js"><\/script>');
-                function preview(input, tipo) {
-                    if(tipo == 'capa'){
-                if (input.files && input.files[0]) {
-                    var reader = new FileReader();
  
-                    reader.onload = function (e) {
-                            $('#preview_imageCapa')
-                .attr('src', e.target.result)
-                                    .width(950)
-                    };
-                    reader.readAsDataURL(input.files[0]);
-                }
-            }
-                    if(tipo == 'principal'){
-                if (input.files && input.files[0]) {
-                    var reader = new FileReader();
- 
-                    reader.onload = function (e) {
-                            $('#preview_image')
-                .attr('src', e.target.result)
-                                    .width(400)
-                    };
-                    reader.readAsDataURL(input.files[0]);
-                }
-            }
-            }
         </script>   
     </head>
     <body >
@@ -275,38 +229,20 @@
                         </div>
                         <div id="galeriaImagens">
                             <figure class="imagensGaleria" >
-                               
+                                <p> imagem 255x150</p>
+                                <img id="preview_imageGaleria1" alt="" src="">
+                                <input type="file" name="imagemCapa" class="imgGaleria1" onchange="preview(this,'galeria1');" multiple>
                             </figure>
                             <figure class="imagensGaleria">
-                                
+                                <p> imagem 255x150</p>
+                                <img id="preview_imageGaleria2" alt="" src="">
+                                <input type="file" name="imagemCapa" class="imgGaleria1" onchange="preview(this,'galeria2');" multiple>
                             </figure>
                             <figure class="imagensGaleria" >
-                                
+                                <p> imagem 255x150</p>
+                                <img id="preview_imageGaleria3" alt="" src="">
+                                <input type="file" name="imagemCapa" class="imgGaleria1" onchange="preview(this,'galeria3');" multiple>
                             </figure>
-                        </div>
-                        <div id="conteudoMateria2">                    
-                            
-                        </div>
-                        <div id="galeriaVideo">                    
-                            <p class="ediConteudoMateria">
-                            <?php
-                                infoArtigos('conteudoMateria','pc/thesims4.php');
-                            ?>
-                            </p>
-                        </div>
-                        <div id="colunista">     
-                            <figure id="autor_materia">
-                            <?php
-                                buscarImagemAutor('1');
-                            ?>
-                            </figure>
-                            <div id="descricaoColunista"> 
-                                <p>                     
-                                    <?php
-                                            buscarDescAutor('1');
-                                    ?> 
-                                </p>
-                            </div> 
                         </div>
                     </form> 
                         <!-- <table id="tabelaPerfil" class="tableInserirMateria">

@@ -35,6 +35,94 @@ function cadastroE(){
                 '</div>';
 }
 
+function mostraOculta(opc, id, id2){  
+     var textbox = document.getElementById(id);
+     var textbox2 = document.getElementById(id2);  
+                if(document.getElementById(opc).value == 'Multiplataforma'){  
+                        if(textbox.style.display == 'none'){  
+                            textbox.style.display = 'inline';  
+                        }  
+                    }else {  
+                        textbox.style.display = 'none';  
+                    }  
+                    if(document.getElementById(opc).value == 'Outro'){  
+                        if(textbox2.style.display == 'none'){  
+                            textbox2.style.display = 'inline';  
+                        }  
+                    }else {  
+                        textbox2.style.display = 'none';  
+                    }  
+                } 
+                
+
+                !window.jQuery && document.write('<script src="http://tecnowarez.com/site/scripts/js/jquery-1.4.3.min.js"><\/script>');
+                function preview(input, tipo) {
+                    if(tipo == 'capa'){
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+ 
+                    reader.onload = function (e) {
+                            $('#preview_imageCapa')
+                .attr('src', e.target.result)
+                                    .width(950)
+                    };
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+                    if(tipo == 'principal'){
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+ 
+                    reader.onload = function (e) {
+                            $('#preview_image')
+                .attr('src', e.target.result)
+                                    .width(400)
+                    };
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+            
+                    if(tipo == 'galeria1'){
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+ 
+                    reader.onload = function (e) {
+                            $('#preview_imageGaleria1')
+                .attr('src', e.target.result)
+                                    .width(255)
+                    };
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+            
+                    if(tipo == 'galeria2'){
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+ 
+                    reader.onload = function (e) {
+                            $('#preview_imageGaleria2')
+                .attr('src', e.target.result)
+                                    .width(255)
+                    };
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+            
+                    if(tipo == 'galeria3'){
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+ 
+                    reader.onload = function (e) {
+                            $('#preview_imageGaleria3')
+                .attr('src', e.target.result)
+                                    .width(255)
+                    };
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+            }
+
+
  function mostraOculta2(opc, id){  
      var textbox = document.getElementById(id); 
      if(id=='categorias'){
