@@ -5,7 +5,7 @@
 
 body{
     width: 100%;
-    background-color: #fff;
+    background-color: lightgrey;
 }
 
 #container{
@@ -426,6 +426,7 @@ body{
     margin-left: 0;
     margin-bottom: 60px;
     float: left;
+    background-color: blue;
 }
 
 #logar{
@@ -581,11 +582,20 @@ body{
     background-color: black;
 }
 
-#materias{
+#corpoConteudo{
     width: 820px;
     height: auto;
     margin-top: 0;
     margin-left: 7%;
+    margin-bottom: 100px;
+    float: left;    
+}
+
+#materias{
+    width: 820px;
+    height: auto;
+    margin-top: 0;
+    margin-left: 0;
     float: left;    
     background-color: #fff;
     box-shadow: 5px 5px 0px 0px #333;
@@ -622,7 +632,7 @@ body{
 .materiaPrincipal{
     width: 760px;
     height: 400px;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-left: 22px;
     float: left;    
     border: solid 5px #333;
@@ -670,7 +680,7 @@ body{
 #materiasPequenas{
     width: 820px;
     height: auto;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-left: 0px;
     float: left;
 }
@@ -680,7 +690,7 @@ body{
     height: 210px;
     margin-top: 0;
     margin-left: 24px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     float: left;
     z-index: 2;
     border: solid 5px #333;
@@ -725,25 +735,44 @@ body{
     color: #fff;
     text-align: center;
     opacity: 1;
+    word-break: break-all;
 }
 
-   #aside1{
+#aside1{
     width:285px;
     height: auto;
     float:left;
     margin-top:0px;
     margin-left:50px;
-    box-shadow: 5px 5px 0px 0px #333;
-    
+    box-shadow: 5px 5px 0px 0px #333;    
+    background-color: #fff;
 }
+
+#aside2{
+    width: 305px;
+    height: auto;
+    margin-top: 240px;
+    margin-right: 7%;
+    margin-bottom: 70px;
+    float: right;
+    background-color: #fff;    
+    box-shadow: 5px 5px 0px 0px #333;
+}
+
 .materiaAside{
     width:270px;
     height: 110px;
     float:left;
-    margin-top:40px;
-    margin-left:5px;
-
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 8px;
 }
+
+.materiaAside + .materiaAside{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
 .imagemMateriasAside{
     width:270px;
     height: 110px;
@@ -1629,6 +1658,7 @@ color:#00989E;
     margin-left: 0;
     margin-bottom: 60px;
     float: left;
+    background-color: blue;
 }
 #publicidade{
     width:800px;
@@ -1924,3 +1954,25 @@ color:#00989E;
     margin-top:-20px;
     margin-left:25px;
 }
+
+#tituloPagina{
+    font-family: century gothic;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16pt;
+    background-color: #00989E;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#paginacaoMateria{
+    width:500px;
+    height:60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 150px;
+    float:left;
+    background-color: red;
+}
+

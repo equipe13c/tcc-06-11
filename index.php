@@ -51,23 +51,33 @@
                         ?>    
                     </div>                
                 </div>  
-                    <div id="materias">
-  
+                    <div id="corpoConteudo">
+                    <div id="materias">  
                          <?php
                              buscarMateriasPrincipal();
-                            ?>    
-                        
+                            ?>                            
                         <div id="materiasPequenas">
                             <?php
                              buscarMateriasPequenas();
                             ?>                             
                         </div> 
-                    </div>    
+                    </div>                
+                        <div id="paginacaoMateria">
+
+                        </div>
+                    </div>
                     <aside id="aside1">
-                        <?php
-                        buscarMateriasAside2();
-                        ?>
+                        <h1 id="tituloPagina"> Top Notícias </h1>
+                        <div id="materiasAside">
+                            <?php
+                                buscarMateriasAside2();
+                            ?>
+                             <?php
+                                buscarMateriasAside2();
+                            ?>
+                        </div>    
                     </aside> 
+                
                 <div id="voltarTopo">
                     <a href="" class="subir">
                         <img src="imagens/topo.png" alt="">
