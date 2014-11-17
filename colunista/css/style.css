@@ -1006,6 +1006,7 @@ table.tablealterarCapa td.info{
 #imagemCapa{
     width:200px;
     height:80px;
+    
 }
 table.tablealterarCapa2{
     margin-left:20px;
@@ -1175,15 +1176,16 @@ table.tableInserirMateria td.campos{
 }
 #imgCapaMateria{
     width: 950px;
-    height: 230px;
+    height: 227px;
     float: left;
     margin-left: 0px;
     margin-top: 60px;
+    border: none;
 }
 
 .imgCapaMateria{
     width: 950px;
-    height: 230px;
+    height: 233px;
     float: left;
     margin-left: 0px;
     margin-top: -70px;
@@ -1191,7 +1193,10 @@ table.tableInserirMateria td.campos{
     border: none;
     opacity: 0;
     cursor: pointer;
+    outline-style: none;
 }
+
+
 
 #imgCapaMateria p{
     margin-left: 20px;
@@ -1207,6 +1212,7 @@ table.tableInserirMateria td.campos{
     color: #00989E;
     text-decoration: underline; 
     box-shadow: 0 0 2px 2px #333;
+    border: 0px;
 }
 
 #imagemPrincipal{
