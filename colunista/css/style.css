@@ -1819,6 +1819,7 @@ ul li p{
     color: #000;
     background-color: lightgrey;
 }
+
 #video1{
    width: 425px;
     height: 300px;
@@ -1849,12 +1850,26 @@ ul li p{
 #video1 + #video2{
     margin-left: 52.5px;
 }
-.txtUrlVideos{
-    height:30px;
+
+#opcoesVideo1{
+    height:80px;
     width:300px;
     float: left;
     margin-left: 90px;
-    margin-top: 30px;   
+    margin-top: 30px; 
+}
+#opcoesVideo2{
+    height:80px;
+    width:300px;
+    float: left;
+    margin-left: 180px;
+    margin-top: 30px; 
+
+}
+.txtUrlVideos{
+    height:30px;
+    width:300px;
+    float: left;  
     border: none;
     color: #000;
     text-align: center;
@@ -1863,8 +1878,21 @@ ul li p{
     text-transform: uppercase;
     font-weight: bold;
 }
+#urlVideo1{
+margin-left: 0px;
+margin-top:0px;
+}
 #urlVideo2{
-margin-left: 170px;
+margin-left: 0px;
+margin-top:0px;
+}
+#preverVideo1,#preverVideo2{
+margin-left: 20px;
+margin-top:10px;
+}
+#retirarVideo1,#retirarVideo2{
+margin-left: 10px;
+margin-top:10px;
 }
 .previewVideos{
     height:30px;
@@ -1872,8 +1900,6 @@ margin-left: 170px;
     border-radius:0;
     background-color:#00989E;
     float:left;
-    margin-top: 10px;
-    margin-left:100px;
     color: #fff;
     text-align: center;
     font-family: century gothic;
@@ -1885,7 +1911,7 @@ margin-left: 170px;
 .retirarVideos + .previewVideos{
 margin-left: 220px; 
 }
-.previewVideos:hover{
+.previewVideos:hover,.retirarVideos:hover,.inserirMateria:hover{
        cursor: pointer;
        opacity:0.7;
 }
@@ -1895,8 +1921,6 @@ margin-left: 220px;
     border-radius:0;
     background-color:#00989E;
     float:left;
-    margin-top: 10px;
-    margin-left:10px;
     color: #fff;
     text-align: center;
     font-family: century gothic;
@@ -1908,7 +1932,21 @@ margin-left: 220px;
 .retirarVideos + .retirarVideos{
 margin-left: 350px; 
 }
-.retirarVideos:hover{
-       cursor: pointer;
-       opacity:0.7;
+
+.inserirMateria{
+    height:30px;
+    width:150px;
+    border-radius:0;
+    margin-left:380px;
+    margin-top:20px;
+    margin-bottom: 20px;
+    background-color:#00989E;
+    float:left;
+    color: #fff;
+    text-align: center;
+    font-family: century gothic;
+    font-size: 10pt;
+    text-transform: uppercase;
+    font-weight: bold;
+    border:0px;
 }

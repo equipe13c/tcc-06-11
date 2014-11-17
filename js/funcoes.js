@@ -190,4 +190,13 @@ function mostraOculta(opc, id, id2){
                     }
                 }
                 }
-                
+                function retirarVideo(id, id2){
+                    if(id2 == 'galeriaVideo1'){
+                    document.getElementById("urlVideo1").value = "";  
+                    document.getElementById("video1").style.display = 'none'; 
+                    }
+                    if(id2 == 'galeriaVideo2'){
+                    document.getElementById("urlVideo2").value = "";  
+                    document.getElementById("video2").style.display = 'none';
+                    }
+                }

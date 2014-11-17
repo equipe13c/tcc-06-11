@@ -245,7 +245,7 @@
                             </figure>                                
                         </div>
                         <div id="galeriaVideo">
-                            <div id="opcoesVideo2">
+                            <div id="opcoesVideo1">
                             <input type="text" name="urlVideo1" class='txtUrlVideos' id="urlVideo1" placeholder="DIGITE A URL DO VIDEO">
                             <input type='button' class='previewVideos' id="preverVideo1" onclick="previewVideo('urlVideo1','iframeVideo1','galeriaVideo1');" value="Prever Vídeo"> </button>
                             <input type='button' class='retirarVideos' id="retirarVideo1" onclick="retirarVideo('video1','galeriaVideo1');" value="Retirar Vídeo"> </button>
@@ -261,6 +261,9 @@
                             <div id="video2" style="display:none">
                                 <iframe width="425" id="iframeVideo2" height="300" src="" frameborder="0" allowfullscreen></iframe>     
                             </div>
+                        </div>
+                        <div id="postarMateria">
+                            <input type="submit" value="Postar Matéria" name="postarMateria" class="inserirMateria">
                         </div>
                     </form> 
                         <!-- <table id="tabelaPerfil" class="tableInserirMateria">
