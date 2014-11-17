@@ -93,19 +93,20 @@
                     </div>
                 </div>    
                 <div id="conteudoMateria">
-                    <div class="editTituloconteudo">
+                    <div class="ediConteudoMateria">
+                        <div class="editTituloconteudo">
+                            <p>
+                                <?php
+                                    infoArtigos('tituloConteudo','pc/thesims4.php');
+                                ?>
+                            </p>
+                        </div>                        
                         <p>
-                    <?php
-                        infoArtigos('tituloConteudo','pc/thesims4.php');
-                    ?>
+                            <?php
+                                infoArtigos('conteudoMateria','pc/thesims4.php');
+                            ?>
                         </p>
-
-                    </div>
-                    <p class="ediConteudoMateria">
-                    <?php
-                        infoArtigos('conteudoMateria','pc/thesims4.php');
-                    ?>
-                    </p>
+                        </div>
                 </div>
                 <div id="galeriaImagens">
                     <figure class="imagensGaleria" >
@@ -124,25 +125,26 @@
                         ?>
                     </figure>
                 </div>
-                <div id="galeriaVideo">                    
-                    <p class="ediConteudoMateria">
-                    <?php
-                        infoArtigos('conteudoMateria','pc/thesims4.php');
-                    ?>
-                    </p>
+                <div id="galeriaVideo">
+                            <div id="video1">
+                                <iframe width="370" id="iframeVideo1" height="245" src="" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div id="video2">
+                                <iframe width="370" id="iframeVideo2" height="245" src="" frameborder="0" allowfullscreen></iframe>     
+                            </div>
                 </div>
                 <div id="colunista">     
                     <figure id="autor_materia">
                     <?php
-                        buscarImagemAutor('1');
+                        buscarImagemAutor('29');
                     ?>
                     </figure>
                     <div id="descricaoColunista"> 
-                        <p>                     
+                        <div id="infoAutor">
                             <?php
-                                    buscarDescAutor('1');
-                            ?> 
-                        </p>
+                            buscarDescricaoUsuario('29');
+                            ?>
+                        </div>
                     </div>
                 </div>
                 <div id="comentario">
