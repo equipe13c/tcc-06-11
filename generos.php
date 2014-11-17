@@ -23,27 +23,25 @@
         </script>        
     </head> 
     <body> 
-        <container id="container">
+        <section id="container">
+            <?php
+                include_once 'conexao/conecta.inc';
+                include_once 'includes/funcoesUteis.inc';
+                session_start();
+            ?>
             <header id="header" ondragstart='return false'>
                 <?php
                     include_once 'includes/menu.php';
                 ?>
                 <div id="logar">
-                    <form action="#" method="post" id="login" onsubmit="return validaLogin(this);"> 
-                        <img src="imagens/user.png" alt="" id="imgUsuario">
-                        <label class="txtLogin"> Usuário: </label><input type="text" name="emailLogin"><br/><br/>
-                        <label class="txtLogin"> Senha: </label><input type="password" name="senhaLogin"><br/><br/>
-                        <input type="submit" value="Entrar" id="botaoLogin"/>
-                        <a href="cadastro.php"> Cadastre-se </a>
-                    </form>
-                </div>                
-                <div id="propaganda1">
-                    <iframe src="http://www.brasilgameshow.com.br/publico/contador-horizontal.php" style="width: 544px; height: 100px; display: block; margin: 0 auto; border: none; overflow: hidden;"></iframe> 
-                </div>
+                    <?php
+                        VerificaSessao('');
+                    ?> 
+                </div>   
             </header>
             <article id="article"> 
                 <div id="materias">                        
-                            <h1 id="tituloPagina"> Gêneros </h1>
+                    <h1 id="tituloPagina"> Gêneros </h1>
                         <div id="materiasPequenas">
                             <a href="#">
                                 <div class="materias">                                
@@ -119,50 +117,15 @@
                             </a>
                         </div> 
                     </div>    
-                    <aside id="aside">
+                    <aside id="aside1">
+                        <h1 id="tituloPagina"> Top Notícias </h1>
                         <div id="materiasAside">
-                            <div class="materiaAside">
-                                <div id="descricaoMateriaAside"> 
-                                    <p> Conheça o novo jogo Hyrule Legends, desenvolvido para a plataforma Wii U. </p>
-                                </div>
-                                <img src="imagens/galeria003.jpg" alt="" class="imagemMateriaAside">                            
-                            </div>
-                            <div class="materiaAside">
-                                <div id="descricaoMateriaAside"> 
-                                    <p> Conheça o novo jogo Hyrule Legends, desenvolvido para a plataforma Wii U. </p>
-                                </div>
-                                <img src="imagens/galeria003.jpg" alt="" class="imagemMateriaAside">                            
-                            </div>
-                            <div class="materiaAside">
-                                <div id="descricaoMateriaAside"> 
-                                    <p> Conheça o novo jogo Hyrule Legends, desenvolvido para a plataforma Wii U. </p>
-                                </div>
-                                <img src="imagens/galeria003.jpg" alt="" class="imagemMateriaAside">                            
-                            </div>
-                            <div class="materiaAside">
-                                <div id="descricaoMateriaAside"> 
-                                    <p> Conheça o novo jogo Hyrule Legends, desenvolvido para a plataforma Wii U. </p>
-                                </div>
-                                <img src="imagens/galeria003.jpg" alt="" class="imagemMateriaAside">                            
-                            </div>
-                            <div class="materiaAside">
-                                <div id="descricaoMateriaAside"> 
-                                    <p> Conheça o novo jogo Hyrule Legends, desenvolvido para a plataforma Wii U. </p>
-                                </div>
-                                <img src="imagens/galeria003.jpg" alt="" class="imagemMateriaAside">                            
-                            </div>
-                            <div class="materiaAside">
-                                <div id="descricaoMateriaAside"> 
-                                    <p> Conheça o novo jogo Hyrule Legends, desenvolvido para a plataforma Wii U. </p>
-                                </div>
-                                <img src="imagens/galeria003.jpg" alt="" class="imagemMateriaAside">                            
-                            </div>
-                            <div class="materiaAside" id="ultimaMateriaAside">
-                                <div id="descricaoMateriaAside"> 
-                                    <p> Conheça o novo jogo Hyrule Legends, desenvolvido para a plataforma Wii U. </p>
-                                </div>
-                                <img src="imagens/galeria003.jpg" alt="" class="imagemMateriaAside">                            
-                            </div>
+                            <?php
+                                buscarMateriasAside2();
+                            ?>
+                             <?php
+                                buscarMateriasAside2();
+                            ?>
                         </div>    
                     </aside> 
                 <div id="voltarTopo">
@@ -180,6 +143,6 @@
                     include_once 'includes/rodape.php';
                 ?>
             </footer>
-        </container>
+        </section>
     </body>
 </html>
