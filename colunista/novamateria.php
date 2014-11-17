@@ -266,11 +266,11 @@
                                 </div>
                             </div>
                         </div>      
-                        <div id="conteudoMateria">
-                            Limite de Caracteres: 1500.
+                        <div id="conteudoMateria">                            
                             <div id="subtituloMateria">
                                 <input type="text" class="subtituloMateria" placeholder="Subtítulo da Matéria">
                             </div>
+                            <p> Limite de Caracteres: 1500. </p>
                             <textarea id="campoConteudo1" placeholder="Digite o texto da matéria aqui" maxlength="1500"></textarea>
                         </div>
                         <div id="galeriaImagens">

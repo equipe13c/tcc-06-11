@@ -1099,7 +1099,7 @@ table.tableInserirMateria td.campos{
 #imgPrincipal{
     width:400px;
     height:250px;
-    margin-top: 330px;
+    margin-top: 390px;
     margin-left: 440px;
     float: left;  
     z-index: 1;
@@ -1677,6 +1677,18 @@ ul li p{
     background-color: #8AB9DB;
 }
 
+#conteudoMateria p{
+    margin-left: 23px;
+    margin-bottom: 10px;
+    float: left;
+    font-family: century gothic;
+    text-transform: uppercase;
+    font-size: 12pt;
+    border: none;
+    font-weight: bold; 
+    color: #fff;
+}
+
 #campoConteudo1{
     width: 95%;
     height: 250px;
@@ -1702,7 +1714,6 @@ ul li p{
     float: left;
     margin-left: 0;
     margin-top: 0;   
-    background-color: red;
 }
 
 .subtituloMateria{
