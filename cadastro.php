@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head> 
-        <title> Multiplayer </title>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
         <link rel="shortcut icon" href="imagens/icone001.png" >
@@ -12,17 +11,15 @@
         <script type="text/javascript" src="js/funcoes.js"></script>
         <script type="text/javascript">             
             onload = function(){
-                var imgLogo = document.getElementById("img-logo");
                 var imgMiniLogo = document.getElementById("imgMiniLogo");
-                imgLogo.innerHTML = '<img src="imagens/logo001.png" alt="" id="logo">'; 
-                imgMiniLogo.innerHTML = '<img src=".imagens/logosReduzidos001.png" alt="" id="miniLogo">';
+                var imgLogo = document.getElementById("img-logo");                
+                imgMiniLogo.innerHTML = '<img src="imagens/logosReduzidos001.png" alt="" id="miniLogo">';
+                imgLogo.innerHTML = '<img src="imagens/logo001.png" alt="" id="logo">';   
                 document.getElementById("nav").style.backgroundColor = "#00989E";
-                document.getElementById("navReduzido").style.backgroundColor = "#00989E";
-                document.getElementById("logar").style.borderBottom = "solid 5px #00989E"; 
-                document.getElementById("botaoLogin").style.backgroundColor = "#00989E";
-                
+                document.getElementById("navReduzido").style.backgroundColor = "#00989E";  
             };  
-        </script>        
+        </script>                
+        <title> Cadastre-se </title>
     </head> 
     <body> 
         <section id="container">
@@ -34,12 +31,7 @@
             <header id="cabecalho">
                 <?php
                     include_once 'includes/menu.php';
-                ?>
-                <div id="logar">
-                    <?php
-                        VerificaSessao('');
-                    ?>                    
-                </div>
+                ?>                
             </header>
             <article id="article"> 
                 <div id="msgCadastro2">
@@ -108,7 +100,7 @@
                 </div>                 
             </article>
             <div id="imgFooter" ondragstart='return false'> 
-                <img src="imagens/ideiaRodape.png" alt=""> 
+                <img src="imagens/imagemRodape.png" alt=""> 
             </div>
             <footer id="footer" ondragstart='return false'>
                 <?php

@@ -13,16 +13,16 @@
                 var imgMiniLogo = document.getElementById("imgMiniLogo");
                 var imgLogo = document.getElementById("img-logo");                
                 imgMiniLogo.innerHTML = '<img src="imagens/logosReduzidos001.png" alt="" id="miniLogo">';
-                imgLogo.innerHTML = '<img src="imagens/logo001.png" alt="" id="logo">'; 
-                document.getElementById("tituloPagina").style.backgroundColor = "#00989E";      
-                document.getElementById("tituloAside").style.backgroundColor = "#00989E"; 
-                document.getElementById("nav").style.backgroundColor = "#00989E";
-                document.getElementById("navReduzido").style.backgroundColor = "#00989E";                
-                document.getElementById("botaoLogin").style.backgroundColor = "#00989E";
-                document.getElementById("logar").style.borderBottom = "solid 5px #00989E";           
+                imgLogo.innerHTML = '<img src="imagens/logo001.png" alt="" id="logo">';                              
+                document.getElementById("tituloPagina").style.backgroundColor = "#6D6A65";  
+                document.getElementById("tituloAside").style.backgroundColor = "#6D6A65";                 
+                document.getElementById("logar").style.borderBottom = "solid 5px #6D6A65";
+                document.getElementById("nav").style.backgroundColor = "#6D6A65";
+                document.getElementById("navReduzido").style.backgroundColor = "#6D6A65";                
+                document.getElementById("botaoLogin").style.backgroundColor = "#6D6A65";              
             };             
         </script>   
-        <title> Multiplayer </title>
+        <title> Nostalgia </title>
     </head>
     <body>
         <section id="container">
@@ -54,8 +54,8 @@
                     </div>                
                 </div>  
                     <div id="corpoConteudo">
-                    <div id="materias">                         
-                        <h1 id="tituloPagina"> Notícias </h1>
+                    <div id="materias">  
+                        <h1 id="tituloPagina"> Nostalgia </h1>
                          <?php
                              buscarMateriasPrincipal();
                             ?>                            
@@ -88,9 +88,6 @@
                     </a>                    
                 </div>
             </article>
-            <div id="imgFooter" ondragstart="return false">
-                <img src="imagens/imagemRodape.png">
-            </div>    
             <footer id="footer">
                 <?php
                     include_once 'includes/rodape.php';
