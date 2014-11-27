@@ -126,12 +126,9 @@
                     </figure>
                 </div>
                 <div id="galeriaVideo">
-                            <div id="video1">
-                                <iframe width="370" id="iframeVideo1" height="245" src="" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                            <div id="video2">
-                                <iframe width="370" id="iframeVideo2" height="245" src="" frameborder="0" allowfullscreen></iframe>     
-                            </div>
+                    <?php buscarUrlVideo('1','urlVideo1');
+                    buscarUrlVideo('1','urlVideo2');
+                    ?>
                 </div>
                 <div id="colunista">     
                     <figure id="autor_materia">
@@ -158,7 +155,7 @@
                                             
                     <div class="coment">
                         <form name='frmComentar' method='post' action='../comentar.php' id='enviar'>
-                        <textarea id='textocomentario' name='comentario'> </textarea>                        
+                        <input type="text" id='textocomentario' name='comentario'>                    
                         <input type="hidden" name='codigoArtigo' value='1' > 
                         <input type="submit" name='btnComentar' value="Publicar" class="botaoEnviar" > 
                         </form>
